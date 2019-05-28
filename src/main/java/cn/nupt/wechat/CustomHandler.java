@@ -1,5 +1,7 @@
 package cn.nupt.wechat;
 
+import io.netty.channel.SimpleChannelInboundHandler;
+
 /**
  * 创建自定义助手类
  *
@@ -7,7 +9,7 @@ package cn.nupt.wechat;
  * @CREAET 2019-05-28 14:58
  */
 
-public class CustomHandler {
+public class CustomHandler  {
 
 
 }
