@@ -1,12 +1,13 @@
 package cn.nupt.wechat.websocket;
 
-import io.netty.channel.Channel;
+
+
+
+
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.group.ChannelGroup;
 import io.netty.channel.group.DefaultChannelGroup;
-import io.netty.channel.local.LocalAddress;
-import io.netty.handler.codec.http.HttpObject;
 import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
 import io.netty.util.concurrent.GlobalEventExecutor;
 
@@ -41,14 +42,21 @@ public class ChatHandler extends SimpleChannelInboundHandler<TextWebSocketFrame>
         String content = msg.text();
         System.out.println("接受到的数据是：" + content);
 
-        for (Channel channel : clients) {
+/*        for (Channel channel : clients) {
             channel.writeAndFlush(
                     new TextWebSocketFrame(
                             "[服务器在]" + LocalDateTime.now()
                                     + "接受到消息，消息为:" + content)
             );
 
-        }
+        }*/
+
+        //和上面的for循环效果是一样的
+        clients.writeAndFlush(
+                new TextWebSocketFrame(
+                        "[服务器在]" + LocalDateTime.now()
+                                + "接受到消息，消息为:" + content)
+        );
 
 
     }
