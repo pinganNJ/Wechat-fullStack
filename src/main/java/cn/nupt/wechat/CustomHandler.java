@@ -22,6 +22,7 @@ public class CustomHandler extends SimpleChannelInboundHandler<HttpObject> {
     @Override
     protected void channelRead0(ChannelHandlerContext chx
             , HttpObject msg) throws Exception {
+
         //获取channel
         Channel channel = chx.channel();
 
