@@ -1,7 +1,7 @@
 package cn.nupt.wechat.pojo.vo;
 
 import java.util.List;
-
+//controller传入到前端（有的东西不需要传入，比如password）
 public class UsersVO {
     private String id;
     private String username;

@@ -8,7 +8,7 @@ public class Users {
 
     /**
      * 用户名，账号，慕信号
-     */
+*/
     private String username;
 
     /**

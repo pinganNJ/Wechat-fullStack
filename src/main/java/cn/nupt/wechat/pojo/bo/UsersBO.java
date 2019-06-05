@@ -1,5 +1,7 @@
 package cn.nupt.wechat.pojo.bo;
 
+
+//前端传入到controller
 public class UsersBO {
     private String userId;
     private String faceData;
