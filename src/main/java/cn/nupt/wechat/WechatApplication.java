@@ -8,6 +8,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 @SpringBootApplication
 //扫描mybatis mapper 的包路径
 @MapperScan(basePackages = {"cn.nupt.wechat.mapper"})
+@ComponentScan(basePackages = {"cn.nupt.wechat","org.n3r.idworker"})
 
 public class WechatApplication {
 
